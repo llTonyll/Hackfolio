@@ -1,0 +1,32 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blog-app.js",
+  "scripts": {
+    "start": "node blog-app",
+    "dev": "brunch watch --server"
+  },
+  "keywords": [],
+  "author": "Jérôme BEHUET <jbehuet@gmail.com>",
+  "repository": "https://github.com/jbehuet/blog-app.git",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "auto-reload-brunch": "^2.7.1",
+    "babel-brunch": "^6.0.6",
+    "brunch": "^2.9.1",
+    "clean-css-brunch": "^2.0.0",
+    "css-brunch": "^2.6.1",
+    "javascript-brunch": "^2.0.0"
+  }
+}

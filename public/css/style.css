@@ -1,0 +1,9 @@
+.pull-right {
+    float: right;
+}
+
+input[type=text]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #0C8CF6;
+    box-shadow: 0 1px 0 0 #0C8CF6
+}
