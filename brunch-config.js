@@ -22,7 +22,7 @@ exports.config = {
         stylesheets: {
             joinTo: {
                 'css/vendor.min.css': [],
-                'css/app.min.css': /^src\/scss/
+                'css/app.min.css': /^public\/scss/
             }
         }
     },
@@ -32,7 +32,7 @@ exports.config = {
     },
     conventions: {
         assets: /static[\\/]/,
-        ignored: 'public/**/*.min.js'
+        ignored: ['public/**/*.min.js', 'public/css/*']
     },
     modules: {
         wrapper: false,
