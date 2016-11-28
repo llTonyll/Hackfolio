@@ -1,21 +1,21 @@
 /*
-Create Angular component blogItem into module app.blog with databinding properties
+Create Angular component projectItem into module app.project with databinding properties
 - post : post data for all content
 - editable : boolean indicate if this element is editable
 */
 ((app) => {
     'use strict'
-    app.component('blogItem', {
+    app.component('projectItem', {
         bindings: {
             post: "<",
             editable: "<"
         },
-        templateUrl: 'js/components/blog/blogItem/blogItem.html',
+        templateUrl: 'js/components/project/projectItem/projectItem.html',
         controller: ['PostsService', '$stateParams', '$state', function(PostsService, $stateParams, $state) {
             let initialPost;
             // Test if $stateParams.id exists (ex: stateParams.id is 1234567 form this url http://domain.ext/1234567)
             if ($stateParams.id) {
-                // If $stateParams.id is _new (when you click on add on blogListMenu button see blogListMenu.html)
+                // If $stateParams.id is _new (when you click on add on projectListMenu button see projectListMenu.html)
                 if ($stateParams.id === '_new') {
                     // Affect post variable with empty object
                     this.post = {};
@@ -31,8 +31,8 @@ Create Angular component blogItem into module app.blog with databinding properti
                     })
                 }
             } else {
-                //If $stateParams.id doesn't exist we change state to app.blog.list (redirection to list)
-                $state.go('app.blog.list')
+                //If $stateParams.id doesn't exist we change state to app.project.list (redirection to list)
+                $state.go('app.project.list')
             }
 
             // Create delete function.
@@ -40,8 +40,8 @@ Create Angular component blogItem into module app.blog with databinding properti
             this.delete = () => {
                 // Call delete method form PostsService with post
                 PostsService.delete(this.post).then((res) => {
-                    // when this request receive response we change state to app.blog.list (redirection to list)
-                    $state.go('app.blog.list')
+                    // when this request receive response we change state to app.project.list (redirection to list)
+                    $state.go('app.project.list')
                 })
             }
 
@@ -69,4 +69,4 @@ Create Angular component blogItem into module app.blog with databinding properti
 
         }]
     })
-})(require('angular').module('app.blog'))
+})(require('angular').module('app.project'))

@@ -8,5 +8,5 @@ There are all depedencies (module)
   require('angular-ui-router'),
   'app.config',
   'app.services',
-  'app.blog'
+  'app.project'
 ]))
