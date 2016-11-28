@@ -1,10 +1,10 @@
 /*
-Create Angular component blogList into module app.blog
+Create Angular component projectList into module app.project
 */
 ((app) => {
     'use strict'
-    app.component('blogList', {
-        templateUrl: 'js/components/blog/blogList/blogList.html',
+    app.component('projectList', {
+        templateUrl: 'js/components/project/projectList/projectList.html',
         controller: ['PostsService', function(PostsService) {
             // Define startIndex variable with default value 3
             this.startIndex = 3
@@ -24,4 +24,4 @@ Create Angular component blogList into module app.blog
 
         }]
     })
-})(require('angular').module('app.blog'))
+})(require('angular').module('app.project'))
