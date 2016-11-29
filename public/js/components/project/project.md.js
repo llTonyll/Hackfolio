@@ -8,18 +8,13 @@ app.project.item : nested state of state app.project, display project-item compo
     'use strict'
     app.config(['$stateProvider', ($stateProvider, $urlRouterProvider, $locationProvider) => {
         $stateProvider
-        .state('app.project', {
-            url: '',
-            abstract: true,
-            templateUrl: 'js/components/project/project.html'
-        })
-        .state('app.project.list', {
-            url: '/',
-            template: '<project-list></project-list>'
-        })
-        .state('app.project.item', {
-            url: '/:id',
-            template: '<project-item editable="true"></project-item>'
-        })
+            .state('app.project', {
+                url: '/',
+                templateUrl: 'js/components/project/projectItem/projectItem.html'
+            })
+            // .state('app.project.list', {
+            //     url: '/',
+            //     template: '<project-list></project-list>'
+            // })
     }])
 })(require('angular').module('app.project', []))
