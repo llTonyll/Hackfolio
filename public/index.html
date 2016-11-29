@@ -18,8 +18,17 @@
 
 <body class="grey lighten-4">
     <!-- ui-view contains the nested views needed by ui-router -->
-    <ui-view></ui-view>
+    <div class="containernav">
+        <navbar></navbar>
+    </div>
+    <div>
+        <ui-view></ui-view>
+    </div>
+    <div class="containerfoot">
+        <footer></footer>
+    </div>
 </body>
+
 
 <!-- This scripts are automaticaly built by brunch -->
 <script src="js/vendor.min.js"></script>
