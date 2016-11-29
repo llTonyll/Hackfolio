@@ -6,7 +6,9 @@ There are all depedencies (module)
   'use strict'
 })(require('angular').module('app', [
   require('angular-ui-router'),
+  'app.myapp',
   'app.config',
   'app.services',
+  'app.common',
   'app.project'
 ]))
