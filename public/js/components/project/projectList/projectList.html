@@ -1,21 +1,129 @@
+<style media="screen">
+    h3 {
+        padding-top: 15px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-family: impact;
+        color: orange;
+    }
+
+    #cards {
+        padding-bottom: 50px;
+    }
+
+    h6 {
+        padding-bottom: 20px;
+    }
+
+    nav {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+</style>
+
 <section>
-    <!-- Display projectListMenu component (see projectListMenu.js )-->
+
+    <!-- Display projectListMenu component (see projectListMenu.js ) -->
     <project-list-menu />
-    <div class="row">
-        <!-- Display message if there is no post -->
-        <div ng-if="$ctrl.posts.length === 0" class="center">
-            <h5>No posts</h5>
-            <i class="material-icons">sentiment_dissatisfied</i>
-        </div>
-        <!-- Repeat project-item component for each post limited with startIndex value
-        post="post" it's databinding, we bind post value to post property of project-item component
-        -->
-        <project-item ng-repeat="post in $ctrl.posts | limitTo: $ctrl.startIndex" post="post"></project-item>
+
+    <div class="fixed-action-btn toolbar">
+        <a class="btn-floating btn-large orange">
+            <i class="large material-icons">settings</i>
+        </a>
+        <ul>
+            <li class="waves-effect waves-light"><a ng-init="search = true" ng-click="search = false"><i class="material-icons">search</i></a></li>
+            <li class="waves-effect waves-light"><a ng-init="view = true" ng-click="view = false"><i class="material-icons">add</i></a></li>
+        </ul>
     </div>
-    <div class="row">
-        <div class="col s12 center">
-            <!-- Display button if there is more posts -->
-            <a class="waves-effect btn-flat" ng-click="$ctrl.loadMore()" ng-if="($ctrl.startIndex < $ctrl.posts.length)">Load More</a>
+
+    <div ng-if="view">
+
+        <h3>Les sites les mieux notés</h3>
+
+        <div class="row" ng-if="search == false">
+            <nav class="col s10 offset-s1 orange">
+                <div class="nav-wrapper orange">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col s4 offset-s1" ng-repeat="site in sites | limitTo:6" id="cards">
+                <div class="card small">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="{{site.src}}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">{{site.name}}<i class="material-icons right">more_vert</i></span>
+                        <p><a href="#">{{site.link}}</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{site.name}}<i class="material-icons right">close</i></span>
+                        <p>Auteur: {{site.author}}</p>
+                        <p>Techno:
+                            <div class="chip">
+                                <img src="http://www.ghoumaire.fr/img/js.png" alt="Contact Person"> JavaScript
+                            </div>
+                        </p>
+                        <button type="button" name="button" ng-click="$ctrl.delete($index)">coucou</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        z
+    </div>
+
+    <div class="container" ng-if="!view">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">web</i>
+                        <input type="text" class="validate" ng-model="$ctrl.post.name">
+                        <label for="text">Site name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">language</i>
+                        <input type="text" class="validate" ng-model="$ctrl.post.link">
+                        <label for="text">Site link</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">perm_identity</i>
+                        <input type="text" class="validate" ng-model="$ctrl.post.author">
+                        <label for="text">Author</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">note_add</i>
+                        <input type="text" class="validate" ng-model="$ctrl.post.src">
+                        <label for="text">Screenshots link</label>
+                    </div>
+                </div>
+                <h6>If your links are not on the cloud, you can send the screenshots directly by the form</h6>
+                <div class="file-field input-field">
+                    <div class="btn orange">
+                        <span>Files</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Screenshots">
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light orange col s2 offset-s5" ng-click="">Submit
+                  <i class="material-icons right">send</i>
+                 </button>
+            </form>
         </div>
     </div>
+
 </section>
