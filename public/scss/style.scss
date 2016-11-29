@@ -10,15 +10,11 @@ textarea.materialize-textarea:focus:not([readonly]) {
     box-shadow: 0 1px 0 0 $primary;
 }
 
-.card {
-    width: 70%;
-    margin-left: 15%;
-}
-
 .prow {
-    width: 90%;
+    width: 70%;
     text-align: justify;
-    margin-left: 5%;
+    margin-left: 15%;
+    margin-bottom: 5%;
 }
 
 .carcontainer {
@@ -26,4 +22,25 @@ textarea.materialize-textarea:focus:not([readonly]) {
     width: 70%;
     margin-left: 15%;
     margin-bottom: 10%;
+}
+
+#greycontainer {
+    .gcontainer {
+        height: 500px;
+        width: 100%;
+        background-color: #665a5a;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .card {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .card-action {
+        height: 41px;
+    }
 }
