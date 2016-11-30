@@ -1,5 +1,5 @@
 <section>
-    <h2>HACKFOLIO PRESENTS..</h2>
+    <h2></h2>
 
     <div class="carcontainer">
         <carousel />
@@ -18,7 +18,7 @@
     <div id="greycontainer">
         <div class="gcontainer">
             <div class="s12 m4 l8">
-                <div class="card horizontal" ng-repeat="site in $ctrl.sites">
+                <div class="card horizontal" ng-repeat="site in $ctrl.sites | limitTo:2">
                     <div class="card-image">
                         <img ng-src="{{site.src}}">
                     </div>

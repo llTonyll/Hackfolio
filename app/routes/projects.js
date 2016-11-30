@@ -3,7 +3,7 @@ This file define all routes (API RESTFull) for project
 */
 'use strict'
 // Require controller used to communicate with database
-let ProjectController = require('../controllers/projectController')
+let ProjectController = require('../controllers/ProjectsController')
 
 module.exports = (app) => {
     // Create new controller
