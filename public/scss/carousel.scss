@@ -22,7 +22,7 @@
         background: #000;
         width: 280px;
         height: 300px;
-        line-height: 280px;
+        line-height: 300px;
         font-size: 5em;
         text-align: center;
         color: #FFF;
@@ -32,42 +32,42 @@
 
     .a {
         transform: rotateY(0deg) translateZ(250px);
-        background: orange;
+        background: url('/img/test2.png');
         background-position: center;
         background-size: cover;
     }
 
     .b {
         transform: rotateY(60deg) translateZ(250px);
-        background: green;
+        background: url('/img/test3.png');
         background-position: center;
         background-size: cover;
     }
 
     .c {
         transform: rotateY(120deg) translateZ(250px);
-        background: yellow;
+        background: url('/img/test4.png');
         background-position: center;
         background-size: cover;
     }
 
     .d {
         transform: rotateY(180deg) translateZ(250px);
-        background: black;
+        background: url('/img/test5.png');
         background-position: center;
         background-size: cover;
     }
 
     .e {
         transform: rotateY(240deg) translateZ(250px);
-        background: blue;
+        background: url('/img/test6.png');
         background-position: center;
         background-size: cover;
     }
 
     .f {
         transform: rotateY(300deg) translateZ(250px);
-        background: red; //url('/img/pictures/office6.jpg')
+        background: url('/img/test7.png');
         background-position: center;
         background-size: cover;
     }
