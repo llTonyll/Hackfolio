@@ -6,10 +6,16 @@ let mongoose = require('mongoose')
 
 // Create du schema Project
 module.exports = mongoose.model('Project', new mongoose.Schema({
-    title: {
+    name: {
         type: String
     },
-    content: {
+    link: {
+        type: String
+    },
+    author: {
+        type: String
+    },
+    src: {
         type: String
     }
 }, {

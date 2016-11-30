@@ -1,12 +1,13 @@
 <div id="carousel">
     <div class="container">
         <div class="inner">
-            <div class="item a">A</div>
-            <div class="item b">B</div>
-            <div class="item c">C</div>
-            <div class="item d">D</div>
-            <div class="item e">E</div>
-            <div class="item f">F</div>
+            <div class="item item-{{$index}}" style="background: url('{{project.src}}');" ng-repeat="project in $ctrl.projects | limitTo:6"></div>
+            <!-- <div class="item a"></div>
+            <div class="item b"></div>
+            <div class="item c"></div>
+            <div class="item d"></div>
+            <div class="item e"></div>
+            <div class="item f"></div> -->
         </div>
     </div>
     <!-- <div class="next" ng-click="$ctrl.rotate('n')">Next</div>

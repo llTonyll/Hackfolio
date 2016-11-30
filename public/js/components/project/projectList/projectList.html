@@ -46,7 +46,7 @@
                 </div>
             </nav>
 
-            <div class="col s6" ng-repeat="site in sites | limitTo:6 | filter:searchText" id="cards">
+            <div class="col s6" ng-repeat="site in $ctrl.sites | limitTo:6 | filter:searchText" id="cards">
                 <div class="card small">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{site.src}}">
