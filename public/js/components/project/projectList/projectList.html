@@ -24,8 +24,8 @@
             <i class="large material-icons">settings</i>
         </a>
         <ul>
-          <li class="waves-effect waves-light"><a ng-init="view = true" ng-click="view = false"><i class="material-icons">add</i></a></li>
-          <li class="waves-effect waves-light"><a ng-click="view = true"><i class="material-icons">view_module</i></a></li>
+            <li class="waves-effect waves-light"><a ng-init="view = true" ng-click="view = false"><i class="material-icons">add</i></a></li>
+            <li class="waves-effect waves-light"><a ng-click="view = true"><i class="material-icons">view_module</i></a></li>
         </ul>
     </div>
 
@@ -47,7 +47,8 @@
                 </div>
             </nav>
 
-            <div class="col s4" ng-repeat="site in sites | limitTo:6 | filter:searchText" id="cards">
+            <div class="col s6" ng-repeat="site in $ctrl.sites | limitTo:6 | filter:searchText" id="cards">
+
                 <div class="card small">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{site.src}}">
