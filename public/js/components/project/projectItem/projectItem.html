@@ -18,17 +18,17 @@
     <div id="greycontainer">
         <div class="gcontainer">
             <div class="s12 m4 l8">
-                <div class="card horizontal" ng-repeat="projectItem in $ctrl.projectItems | limitTo:2">
+                <div class="card horizontal" ng-repeat="site in $ctrl.sites">
                     <div class="card-image">
-                        <img src="http://lorempixel.com/100/190/nature/6">
+                        <img ng-src="{{site.src}}">
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h3 class="header">{{name}}</h3>
-                            <p class="content">{{author}}</p>
+                            <h3 class="header">{{site.name}}</h3>
+                            <p class="content">{{site.author}}</p>
                         </div>
                         <div class="card-action">
-                            <a class="alink">{{link}}</a>
+                            <a class="alink">{{site.link}}</a>
                         </div>
                     </div>
                 </div>
