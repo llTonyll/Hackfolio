@@ -5,7 +5,7 @@ Create Angular component projectList into module app.project
     'use strict'
     app.component('projectList', {
         templateUrl: 'js/components/project/projectList/projectList.html',
-        controller: ['$scope', function($scope) {
+        controller:['$scope', function($scope) {
             $scope.sites = [{
                 'name': 'Google',
                 'link': 'http://www.google.com',
