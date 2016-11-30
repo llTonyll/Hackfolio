@@ -10,7 +10,7 @@ app.project.item : nested state of state app.project, display project-item compo
         $stateProvider
             .state('app.projectItem', {
                 url: '/',
-                templateUrl: 'js/components/project/projectItem/projectItem.html'
+                template: '<project-item></project-item>'
             })
             .state('app.projectList', {
                 url: '/project/projectList',
