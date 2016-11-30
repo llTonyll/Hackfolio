@@ -30,44 +30,39 @@
         border-radius: 10px;
     }
 
-    .a {
+    .item-0 {
         transform: rotateY(0deg) translateZ(250px);
-        background: url('/img/test2.png');
         background-position: center;
         background-size: cover;
     }
 
-    .b {
+    .item-1 {
         transform: rotateY(60deg) translateZ(250px);
         background: url('/img/test3.png');
         background-position: center;
         background-size: cover;
     }
 
-    .c {
+    .item-2 {
         transform: rotateY(120deg) translateZ(250px);
-        background: url('/img/test4.png');
         background-position: center;
         background-size: cover;
     }
 
-    .d {
+    .item-3 {
         transform: rotateY(180deg) translateZ(250px);
-        background: url('/img/test5.png');
         background-position: center;
         background-size: cover;
     }
 
-    .e {
+    .item-4 {
         transform: rotateY(240deg) translateZ(250px);
-        background: url('/img/test6.png');
         background-position: center;
         background-size: cover;
     }
 
-    .f {
+    .item-5 {
         transform: rotateY(300deg) translateZ(250px);
-        background: url('/img/test7.png');
         background-position: center;
         background-size: cover;
     }
