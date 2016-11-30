@@ -1,6 +1,6 @@
 /*
 Create app.config module
 */
-((app)=>{
+((app) => {
 
 })(require('angular').module('app.config', []))

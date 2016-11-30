@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
+Create Angular service ProjectsService in app.services module
+=======
 Create Angular service projectsService in app.services module
+>>>>>>> c86bb1126845cdcdbf10b6bc031bdd1d1e3528a3
 */
 ((app) => {
     'use strict'
